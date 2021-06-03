@@ -12,11 +12,11 @@ app.conf.enable_utc = False
 app.config_from_object(settings, namespace='CELERY')
 
 app.conf.beat_schedule = {
-    'every-10-secounds': {
-        'task': 'mainapp.tasks.update_stock',
-        'schedule': 10,
-        'args': (['BAJAJFINSV.NS', 'BAJAJ-AUTO.NS'],)
-    },
+    # 'every-10-secounds': {
+    #     'task': 'mainapp.tasks.update_stock',
+    #     'schedule': 10,
+    #     'args': (['BAJAJFINSV.NS', 'BAJAJ-AUTO.NS'],)
+    # },
 }
 
 app.autodiscover_tasks()
